@@ -44,5 +44,5 @@ class AppConfig:
     camera: CameraConfig = field(default_factory=CameraConfig)
     age: AgeConfig = field(default_factory=AgeConfig)
     mediapipe: MediaPipeConfig = field(default_factory=MediaPipeConfig)
-    processing_width: int = 480 # Downscale width for inference
+    processing_width: int = 320 # Downscale width for inference
     window_name: str = "Face & Hand Landmarks + Age Estimation"

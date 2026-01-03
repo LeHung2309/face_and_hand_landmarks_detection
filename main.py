@@ -55,7 +55,7 @@ def main():
 
             # 3. Submit to Holistic Detector (Async - Fire & Forget)
             # Use .copy() to ensure thread safety as frame_process might be modified or reused
-            detector.process_async(frame_process.copy())
+            detector.process_async(frame_process)
 
             # 4. Retrieve Latest Available Results (Non-blocking)
             results = detector.get_latest_results()

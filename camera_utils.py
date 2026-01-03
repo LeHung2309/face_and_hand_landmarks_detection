@@ -17,6 +17,7 @@ class CameraStream:
         # Set resolution
         self.capture.set(cv2.CAP_PROP_FRAME_WIDTH, self.config.width)
         self.capture.set(cv2.CAP_PROP_FRAME_HEIGHT, self.config.height)
+        self.capture.set(cv2.CAP_PROP_BUFFERSIZE, 1)
         
         self.frame: Optional[cv2.typing.MatLike] = None
         self.running = False
